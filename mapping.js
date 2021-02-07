@@ -73,7 +73,7 @@ function createMap(value, zoom = '5') {
 function startPolling() {
     
     setInterval(function() {
-        fetch('http://api.open-notify.org/iss-now.json')
+        fetch('https://cors-anywhere.herokuapp.com/http://api.open-notify.org/iss-now.json')
         .then(response => response.json())
         .then(coords => {
             addMarker(coords.iss_position.latitude, coords.iss_position.longitude)
