@@ -1,45 +1,54 @@
 body { 
     display: flex;
-    flex-direction: column;
     margin: auto;
-    align-items: center;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
     font-size: 13px;
+}
+
+.mainContainer {
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    height: 90%;
 }
 
 h1 {
     margin: 0 0 20px 0;
-    padding-left: 0;
     font-size: 2rem;
     font-weight: 100;
-    text-transform: capitalize;
-}
-
-.inputContainer {
-    width: 90%;
-    /* border: 1px solid yellow; */
-    margin: auto 0 0 0;
-}
-
-.mapContainer {
-    display:flex;
-    flex-direction: column;
-    width: 90%;
-    /* border: 1px solid black; */
-    margin: auto;
-    height: 90%;
 }
 
 .statsContainer {
     margin: 0 0 20px 0;
 }
 
-.userStats {
+.searchContainer {
     padding: 10px 0 0 0;
     display:flex;
-    flex-direction: row;
+}
+
+.searchInput {
+    position: relative;
+    display: flex;
+    min-width: 450px;
+}
+
+.myLocationIcon {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 14px;
+    cursor: pointer;
+    animation-name: pulse; 
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.inputContainer {
+    width: 90%;
+    margin: auto 0 0 0;
 }
 
 input {
@@ -60,33 +69,20 @@ button {
     outline: 0;
 }
 
-.searchContainer {
-    position: relative;
-    display: flex;
-    min-width: 450px;
+ul, li {
+    list-style-type: none;
+    padding: 10px 0 0 0;
 }
 
-.myLocation-icon {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 14px;
-    cursor: pointer;
-    animation-name: pulse; 
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+.inlineList {
+    display:inline;
 }
-
 
 #map { 
-    position: relative;
-    width: 100%; 
-    /* border: 1px solid blue; */
     height: 100%;
-    /* border-radius: 10px; */
 }
 
-.marker {
+.issIcon {
     animation-name: pulse; 
     animation-duration: 0.5s;
     animation-iteration-count: infinite; 
@@ -106,14 +102,3 @@ button {
         opacity: 0;
     } 
 }
-
-.inlineList {
-    display:inline;
-}
-
-ul, li {
-    list-style-type: none;
-    padding: 10px 0 0 0;
-}
-
-
