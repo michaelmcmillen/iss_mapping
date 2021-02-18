@@ -59,7 +59,7 @@ function startPolling() {
     let marker = createMarker()
 
     setInterval(function() {
-        fetch('https://cors-anywhere.herokuapp.com/http://api.open-notify.org/iss-now.json') //CORS Anywhere used due to HTTP
+        fetch('http://localhost:8080/http://api.open-notify.org/iss-now.json') //CORS Anywhere used due to HTTP
         .then(response => response.json())
         .then(coords => {
             addMarker(marker, coords.iss_position.latitude, coords.iss_position.longitude) //Create ISS marker icon with response coords
@@ -92,7 +92,7 @@ function addMarker(marker, lat, long) {
 //Retrieve number of people in space
 function peopleInSpace() {
     // Uses 'cors-anywhere' proxy to add Access-Control-Allow-Origin: * to response header
-    fetch('https://cors-anywhere.herokuapp.com/http://api.open-notify.org/astros.json')
+    fetch('http://localhost:8080/http://api.open-notify.org/astros.json')
         .then(response => response.json())
         .then(people => {
             peopleInSpaceText.textContent = people.number;
@@ -125,7 +125,7 @@ function myLocation() {
 //Retrieve pass times for location based on users location or search
 function passTimes(lon, lat) {
     // Uses 'cors-anywhere' proxy to add Access-Control-Allow-Origin: * to response header
-    let url = new URL('https://cors-anywhere.herokuapp.com/http://api.open-notify.org/iss-pass.json')
+    let url = new URL('http://localhost:8080/http://api.open-notify.org/iss-pass.json')
     url.search = new URLSearchParams({ //Create URL with long and lat parameters
         lat: lat,
         lon: lon
