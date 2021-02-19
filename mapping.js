@@ -140,11 +140,16 @@ function passTimes(lon, lat) {
 
 //Get coordinates for searched location
 function getCoords() {
-    let apiKey = '82845a74c5cd488caf782fd4074540b3';
-    //Opencagedata API which converts text location to longitude and latitude values
-    fetch('https://api.opencagedata.com/geocode/v1/json?key=' + apiKey + '&q=' + locationInput.value)
+
+    fetch('https://infinite-cove-31537.herokuapp.com/geoCode', { //http://localhost:8080/geoCode
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({loc: locationInput.value})
+    })
     .then(response => response.json())
     .then(coords => {
-        createMap([coords.results[0].geometry.lng, coords.results[0].geometry.lat], 12);
-    });
+            createMap([coords.results[0].geometry.lng, coords.results[0].geometry.lat], 12);
+        });
 }
