@@ -36,4 +36,4 @@ ISS Mapping is a personal practice project, used to bring together the use of th
 </ul>
 
 
-Click <a href='https://michaelmcmillen.github.io/iss_mapping/'>here</a> to view a live demo.
+Click <a href='https://michaelmcmillen.github.io/iss_mapping/'>here</a> to view a live demo (Please be patient for map to load when searching a location, or selecting your own location. Performance is an issue as highlighted in Issues above. Thankyou).
