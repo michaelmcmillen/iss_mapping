@@ -35,4 +35,5 @@ ISS Mapping is a personal practice project, used to bring together the use of th
     <li>Performance in relation to map movement is slow. Investigation into why is required, so map and transitions are smooth and responsive.</li>  
 </ul>
 
-Click <a href='https://michaelmcmillen.github.io/iss_mapping/'>here</a> to view.
+
+Click <a href='https://michaelmcmillen.github.io/iss_mapping/'>here</a> to view a live demo.
